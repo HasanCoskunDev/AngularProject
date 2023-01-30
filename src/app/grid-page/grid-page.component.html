@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="menu-list">
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: chartreuse">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: indigo">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: tan">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: slateblue">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: saddlebrown">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: blue">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: teal">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: red">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: aqua">Menu Item</a>
+    </div>
+    <div class="menu-item" (click)="getAndChangeColor()">
+      <a style="background: cadetblue">Menu Item</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="title">
+      <h3>Title</h3>
+    </div>
+
+    <div class="form-div">
+      <form #kaydet="ngForm" (ngSubmit)="submit(kaydet)">
+        <div class="form-item">
+          <input
+            id="1"
+            required
+            type="text"
+            name="form1"
+            class="form-control"
+            #form1="ngModel"
+            ngModel
+          />
+        </div>
+        <div class="form-item">
+          <input
+            id="2"
+            required
+            type="text"
+            name="form2"
+            class="form-control"
+            #form2="ngModel"
+            ngModel
+          />
+        </div>
+        <div class="form-item">
+          <input
+            id="3"
+            required
+            type="text"
+            name="form3"
+            class="form-control"
+            #form3="ngModel"
+            ngModel
+          />
+        </div>
+        <div class="form-item">
+          <input
+            id="4"
+            required
+            type="text"
+            name="form4"
+            class="form-control"
+            #form4="ngModel"
+            ngModel
+          />
+        </div>
+        <div class="button-div">
+          <input type="submit" value="Validate Button" />
+
+          <input type="submit" value="Reset Button" />
+          <input
+            *ngIf="!isDisabled; else other"
+            routerLink="/flex-page"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            type="submit"
+            value="Submit Button"
+          />
+          <ng-template #other
+            ><input
+              routerLink="/flex-page"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              type="submit"
+              value="Submit Button"
+              disabled
+          /></ng-template>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
